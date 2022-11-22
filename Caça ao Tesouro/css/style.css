@@ -1,0 +1,242 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    background: rgb(37,43,36);
+    background: linear-gradient(180deg, rgba(37,43,36,1) 0%, rgba(7,241,229,1) 37%, rgba(0,0,0,1) 81%); 
+  }
+  
+  img {
+    width: 6rem;
+    height: 6rem;
+  }
+  
+  .cabecalho {
+    height: 18vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .titulo__principal {
+    font-size: 5rem;
+    color:wheat;
+    font-family: 'Great Vibes', cursive;
+  }
+  
+  
+  .botoes__destaque {
+    font-size: 2rem;
+    padding-right: 2rem;
+    font-family: 'Gloria Hallelujah', cursive;
+    color: white;
+  }
+  
+  
+  .dificuldade {
+    font-size: 1.4rem;
+    margin-top: 3%;
+    font-family: 'Gloria Hallelujah', cursive;
+    color: white;
+    display: none;
+  }
+  
+  .niveis {
+    display: none;
+    font-size: 1.4rem;
+    padding: 1.5rem; 
+  }
+  
+  .modo {
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+    color: white;
+    font-weight: 600;   
+  }
+  
+  .modo--facil {
+    background-color: #005e00;  
+  }
+  
+  .modo--medio {
+    background-color: #0000a8;
+  }
+  
+  .modo--dificil {
+    background-color: #ca0000; 
+  }
+  
+  .modo:hover {
+    border: 2px solid wheat;
+  }
+  
+  .fa {
+    color: black;
+    cursor: pointer;
+    margin-left: 1rem;
+  }
+  
+  .fa:hover {
+    color:rgb(201, 0, 0);  
+  }
+  
+  .tentativas {
+    background-color: rgb(14, 35, 55);
+    width: 20vw;
+    border: 2px solid black;
+    text-align: center;
+    padding: 15px;
+    box-shadow: rgb(255, 255, 255) 0px 20px 30px -15px;
+  }
+  
+  .tentativa__quantidade {
+    margin-top: 3%;
+    font-size: 2rem;
+    font-family: 'Gloria Hallelujah', cursive;
+    color: white;
+  }
+  
+  .resultado {
+    font-family: 'Kanit', sans-serif;
+    margin-top: 5%;
+    font-size: 2rem;
+    color: white;
+  }
+  
+  #mensagem--resultado {
+    font-family: 'Kanit', sans-serif;
+    margin-top: 3%;
+    font-size: 2rem;
+  }
+  
+  .container {
+    height: 82vh;
+    width: 80vw;
+    display:grid;
+    margin:0 auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "painel casas";
+    align-items: center;
+    grid-gap: 20%;
+    
+  }
+  
+  .linha__celulas {
+    grid-area: casas;
+    height: 80%;
+    width: 40%; 
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    gap: 1.2rem;
+    grid-template-columns: repeat(5, auto);    
+  }
+  
+  .celula {
+    width: 6rem;
+    height: 6rem;
+    background-color: rgb(14, 35, 55);
+  }
+  
+  .celula:hover {
+    background-color: rgb(33, 224, 224);
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 1700px) {
+    .tentativas {
+      width: 25vw;
+    }
+  
+  }
+  
+  @media screen and (max-width: 1200px) {
+  
+    .container{
+      width: 90vw;
+      
+    }
+     .tentativas {
+      width: 30vw;
+    } 
+  }
+  
+  @media screen and (max-width: 1000px) {
+  
+    .container{
+      width: 90vw;
+      
+    }
+     .tentativas {
+      width: 35vw;
+    } 
+  
+    .celula, img {
+    width: 5rem;
+    height: 5rem;
+    }
+  }
+  
+  @media screen and (max-width: 900px) {
+  
+    .container{
+      width: 90vw;
+      
+    }
+     .tentativas {
+      width: 40vw;
+    } 
+  
+    .celula, img {
+    width: 4rem;
+    height: 4rem;
+    }
+  }
+  
+  @media screen and (max-width: 500px)  {
+  
+    html{
+      background: #02504C;
+    }
+  
+  .titulo__principal {
+    font-size: 3rem;
+  }
+    
+    .container{
+      width: 90vw;
+      display: flex;
+      flex-direction: column;
+  
+    }
+     .tentativas {
+      width: 80vw;
+    } 
+   
+    .modo{
+      display: block;
+    }
+  
+    .celula, img {
+    width: 4rem;
+    height: 4rem;
+    }
+  
+    .linha__celulas {
+    margin-top: 15%;
+    grid-template-columns: repeat(3, auto);
+   } 
+  
+  }
+  
+  @media screen and (max-height: 650px){
+    .tentativas {
+      margin-bottom: 150px;
+    }
+  }
+  

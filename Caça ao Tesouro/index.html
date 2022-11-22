@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Caça ao Tesouro</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"> 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <header class="cabecalho">
+        <h1 class="titulo__principal">Caça ao Tesouro</h1>
+    </header>
+    
+  <main class="container">
+    
+    <aside class="tentativas">
+      
+        <button  class="botoes__destaque">Iniciar Jogo: <i class="fa fa-play" onclick="iniciarJogo()" aria-hidden="true"></i></button>
+        <button class="botoes__destaque">Recomeçar: <i class="fa fa-refresh" onclick="recomecar()" aria-hidden="true"></i></button>  
+        <p class="dificuldade">Escolha a dificuldade antes de começar:</p>  
+      
+      <div class="niveis"> 
+        <span  onclick="selectLevel('Fácil')" class="modo modo--facil">Fácil</span> - <span onclick="selectLevel('Médio')" class="modo modo--medio">Médio</span> - <span onclick="selectLevel('Difícil')" class="modo modo--dificil">Difícil</span>
+      </div>
+      
+        <p class="tentativa__quantidade">Você tem <span id="numeroDeTentativa">?</span> tentativas para achar o tesouro</p>
+        <p class="resultado">Resultado:</p>
+        <p id="mensagem--resultado"></p>
+        
+    </aside>
+    
+    <div class="linha__celulas"> </div>
+</main>
+
+  
+   <script src="script.js"></script>
+</body>
+</html>
